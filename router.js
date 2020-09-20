@@ -17,7 +17,7 @@ function init() {
     var control = myMap.controls.get('routeButtonControl');
 
     // Зададим координаты пункта отправления с помощью геолокации.
-    control.routePanel.geolocate('from');
+    console.log(control.routePanel.geolocate('from');)
 
     // Откроем панель для построения маршрутов.
     control.state.set('expanded', true).then(function (route) {
