@@ -16,7 +16,7 @@ function init() {
     // Откроем панель для построения маршрутов.
     
     ymaps.route([
-        control.state.set('expanded', true);
+        control.state.set('expanded', true)
     ]).then(function (route) {
         myMap.geoObjects.add(route);
         // Зададим содержание иконок начальной и конечной точкам маршрута.
