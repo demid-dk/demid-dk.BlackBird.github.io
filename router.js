@@ -3,26 +3,21 @@ ymaps.ready(init);
 function init() {
     var myMap = new ymaps.Map("map", {
             center: [55.745508, 37.435225],
-            zoom: 13,
+            zoom: 13
             controls: ['routeButtonControl']
-        
-            
+       
         });
 
-    // Добавим на карту схему проезда
-    // от улицы Крылатские холмы до станции метро "Кунцевская"
-    // через станцию "Молодежная" и затем до станции "Пионерская".
-    // Точки маршрута можно задавать 3 способами:
-    // как строка, как объект или как массив геокоординат.
     var control = myMap.controls.get('routeButtonControl');
 
     // Зададим координаты пункта отправления с помощью геолокации.
-    console.log(control.routePanel.geolocate('from');)
-
+    control.routePanel.geolocate('from');
+    
     // Откроем панель для построения маршрутов.
-    control.state.set('expanded', true).then(function (route) {
     
-    
+    ymaps.route([
+        control.state.set('expanded', true);
+    ]).then(function (route) {
         myMap.geoObjects.add(route);
         // Зададим содержание иконок начальной и конечной точкам маршрута.
         // С помощью метода getWayPoints() получаем массив точек маршрута.
