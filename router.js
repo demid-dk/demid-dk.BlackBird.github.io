@@ -9,9 +9,10 @@ function init() {
         });
 
     var control = myMap.controls.get('routeButtonControl');
-
+    
     // Зададим координаты пункта отправления с помощью геолокации.
     control.routePanel.geolocate('from');
+    control.state.set('expanded', true);
     var multiRoutePromise = control.routePanel.getRouteAsync();
     // Откроем панель для построения маршрутов.
     multiRoutePromise.then(function(multiRoute) {
