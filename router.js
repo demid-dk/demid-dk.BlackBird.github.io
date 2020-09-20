@@ -5,8 +5,8 @@ function init() {
             center: [55.745508, 37.435225],
             zoom: 13,
             controls: ['routeButtonControl']
-        }, {
-            searchControlProvider: 'yandex#search'
+        
+            
         });
 
     // Добавим на карту схему проезда
@@ -20,18 +20,9 @@ function init() {
     control.routePanel.geolocate('from');
 
     // Откроем панель для построения маршрутов.
-    control.state.set('expanded', true);
-    ymaps.route([
-        control.routePanel.geolocate('from'),
-        {
-            point: 'Москва, метро Молодежная',
-            // метро "Молодежная" - транзитная точка
-            // (проезжать через эту точку, но не останавливаться в ней).
-            type: 'viaPoint'
-        },
-        [55.731272, 37.447198], // метро "Кунцевская".
-        'Москва, метро Пионерская'
-    ]).then(function (route) {
+    control.state.set('expanded', true).then(function (route) {
+    
+    
         myMap.geoObjects.add(route);
         // Зададим содержание иконок начальной и конечной точкам маршрута.
         // С помощью метода getWayPoints() получаем массив точек маршрута.
