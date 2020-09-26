@@ -66,4 +66,4 @@ function init() {
         alert('Возникла ошибка: ' + error.message);
     });
 }
-console.log('.list')
+console.log('#list')
