@@ -57,6 +57,7 @@ function init() {
                 var street = segments[j].getStreet();
                 moveList += ('Едем ' + segments[j].getHumanAction() + (street ? ' на ' + street : '') + ', проезжаем ' + Math.round(segments[j].getLength()) + ' м.,');
                 moveList += '</br>'
+                console.log(segments[j].getHumanAction(), ' ', Math.round(segments[j].getLength()))
             }
         }
         moveList += 'Останавливаемся.';
