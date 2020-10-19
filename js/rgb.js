@@ -1,0 +1,1 @@
+var r=255,g=0,b=0;function rgb(){if(r==255&&g<255&&b==0){g++}else if(g==255&&r!=0){r--}if(g==255&&b<255&&r==0){b++}else if(b==255&&g!=0){g--}if(b==255 &&r<255&&g==0){r++}else if(r==255&&b!=0){b--}}
