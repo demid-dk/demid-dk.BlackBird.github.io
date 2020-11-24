@@ -1,0 +1,416 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------*/
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #1d1a1a;
+}
+body::-webkit-scrollbar {
+  width: 10px; 
+  background: #070707e3; 
+} 
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(173.66deg, #fcee78 -69.07%,#7ca86f 79.85%);
+  border-radius: 16px;
+}
+/*--------*/
+/* Первичные контейнеры */
+.wrapper{
+  padding: 70px 100px;
+}
+/*Вертикальный контейнер*/
+.con_col{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: justify;
+}
+/*Горизонтальный контейнер*/
+.con_row{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: justify;
+  /*#7ca86f #fcee78*/
+  border: 2px 0px solid black;
+}
+/*Навигация*/
+#header{
+  position: fixed;
+  z-index: 100;
+  width: 1910px;
+  height: 100px;
+  justify-content: space-around;
+  background: #87b678;/*#5f7548*/
+  box-shadow: 0 0 10px black;
+}
+#img{
+  margin: 20px 0 20px 20px;
+}
+/* #img img{
+  height: 80px;
+} */
+#header_nav{
+  justify-content: stretch;
+  background:#87b678;
+  font-weight: 800;
+}
+#header_nav input{
+  background:#87b678;
+  /* margin: 0 50px; */
+  padding: 10px 60px;
+  /* align-self: center; */
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+  font-size: 45pt;
+  text-shadow: 3px 3px 1px #c2c781;
+}
+#header_nav input:hover{
+  font-size: 55pt;
+  font-weight: 600;
+  margin: 0 20px;
+}
+#header_nav input:active{
+  background: #80ac71;
+}
+#theme{
+  margin: 5px;
+  margin-right: 30px;
+  padding: 5px;
+  border-radius: 20px;
+  background: #87b678;
+  font-size: 35pt;
+}
+#theme:active{
+  background: #80ac71;
+}
+/* Темы */
+#custom{
+  position: fixed;
+  z-index: 10;
+  transition: 1s ease-out;
+  top: -460px;
+  right: 0px;
+  margin-top: 70px;
+  padding: 30px 70px;
+  background: #729764;
+  box-shadow: -1px 2px 15px #070707;
+  font-size: 40pt;
+  text-align: center;
+  justify-content: stretch;
+}
+#custom.show{
+  top: 30px;
+}
+#custom .button{
+  padding: 20px 30px;
+  margin: 20px 0px;
+  font-size: 15pt;
+  background: #c0d97b;
+}
+/*Главная*/
+#xd{
+  position: absolute;
+  z-index: -10;
+  /* background: #2e2e2ead; */
+}
+#xd img{
+  object-fit: contain;
+  object-position: center;
+  width: calc(100vw - 10px); /*1600*757*/
+  height: 100vh;
+}
+/* /V\otto */
+#motto{
+  padding: 200px;
+  height: 100vh;
+  background:  #5c3c16ad;
+
+  font-size: 50pt;
+}
+#motto h3{
+  margin: 200px 0px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 800;
+  background:  #a3633b;
+}
+#motto h3::selection{
+  background: #ca7b4ab7;
+  color: #ffffff;
+}
+
+/*СТРАНИЦА*/
+/* Причины */
+/* Общий контейнер */
+#reasons_container{
+  height: 550px;
+  padding: 25px 100px;
+  /* background: #fcee78; */
+  /* box-shadow: 0px 5px 30px black; */
+}
+/* Контейнер элементов */
+#reason_container{
+  margin: 20px;
+  justify-content: center;
+  /* border: 2px solid black; */
+}
+/* Иконка */
+.svg{
+  margin-bottom: 50px;
+  align-self: center;
+  text-align: center;
+}
+/* Текст */
+.reason{
+  align-self: center;
+  text-align: center;
+  padding: 40px;
+
+  font-size: 37pt;
+  letter-spacing: 5px;
+  font-weight: 800;
+  border-radius: 10px;
+  /* box-shadow: 1px 1px 15px #0000005b; */
+}
+/* -------- */
+/*Sample*/
+.text{
+  padding: 25px 100px;
+  font-weight: 700;
+  background: #90ff46;
+}
+/* -------- */
+/* Столы */
+#tables{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.1) 7.5%, rgba(255, 255, 255, 0.2) 92.5%, rgba(0, 0, 0, 0.5) 100%);
+  mix-blend-mode: normal;
+}
+.table{
+  /* height: 400px; */
+  /* width: 400px; */
+  background: #90ff46;
+  box-shadow: 0 0 15px 5px #000000;
+  border-radius: 5px;
+}
+/* -------- */
+/* YouTube */
+#yt_container{
+  padding: 5px;
+  align-items: center;
+  /* box-shadow: -3px 0px 15px #000000; */
+}
+#yt_container p{
+  margin: 60px 0 30px 0;
+  font-size: 35pt;
+  font-weight: 600;
+}
+#yt_container iframe{
+  margin: 25px 0 50px 0;
+}
+/* Фичи */
+#features{
+  justify-content: center;
+  align-items: center;
+  /* background: #3b6fa3; */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0.2) 2.5%, rgba(255, 255, 255, 0.2) 97.5%, rgba(0, 0, 0, 0.3) 100%);
+  mix-blend-mode: normal;
+}
+.feature{
+  align-self: center;
+  margin: 50px 0;
+  background: #7ca86f;
+  border-radius: 5px;
+  box-shadow: 0 0 20px black;
+}
+#features .text{
+  margin: auto 20px;
+  background: #90ff46;
+  font-size: 25pt;
+  text-align: center;
+  align-self: flex-start;
+}
+#features .img{
+  margin: 20px;
+  background: #90ff46;
+}
+/* -------- */
+footer{
+  padding: 2.5vh 10vw;
+  font-weight: 800;
+  font-size: 30pt;
+  background: #4a6442;
+  color: #070707;
+  box-shadow: inset 3px 3px 10px black;
+}
+/* -------- */
+/* Адаптивность */
+@media screen and (max-width: 1800px){
+  #reasons_container{
+    padding: 2.5vh 4vw;
+  }
+  .reason{
+    font-size: 20pt;
+  }
+  .text{
+    padding: 1vh 5vw;
+  }
+}
+@media screen and (max-width: 1600px){
+  #img img{
+    height: 50px;
+  }
+  #header_nav input{
+    font-size: 35pt;
+  }
+  #custom{
+    right: 30px;
+    width: 250px;
+    padding: 30px 60px;
+  }
+  #custom .button{
+    padding: 20px;
+  }
+  #reasons_container{
+    padding: 25px 20px;
+  }
+  .reason{
+    font-size: 17pt;
+  }
+  .text{
+    padding: 25px 5vw;
+  }
+}
+@media screen and (max-width: 1500px){
+  #reasons_container{
+    padding: 25px 40px;
+  }
+  .reason{
+    font-size: 16pt;
+  }
+  .text{
+    padding: 0 5vw;
+  }
+}
+@media screen and (max-width: 1250px){
+  #motto h3{
+    font-size: 40pt;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 1050px){
+  #motto h3{
+    font-size: 30pt;
+    font-weight: 600;
+  }
+}
+/*Классы*/
+.visible{
+  display: block;
+}
+.visible-flex{
+  display: flex;
+}
+.hidden{
+  display: none;
+}
+.noscroll{
+  overflow: hidden;
+}
+/* ТЕМЫ */
+/* Стандартная */
+.st1{
+  background: #fcee78;
+}
+.st2{
+  background: #87b678;
+}
+.st3{
+  background: #3b6fa3;
+}
+/* Белая */
+.l1{
+  background: #ffffff;
+}
+.l2{
+  background: #b1aeae;
+}
+/* Тёмная */
+.d1{
+  background: #000000;
+}
+.d2{
+  background: #575757;
+}
