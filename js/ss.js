@@ -1,6 +1,6 @@
 $(document).ready(()=>{
-site()
-function site(){
+ss()
+function ss(){
     $('#img img').outerHeight($('#header').height()-40)
     $('#ytFrame').outerHeight(window.innerHeight - window.innerHeight*0.3)
     $('#ytFrame').outerWidth((window.innerWidth-10)-(window.innerWidth-10)*0.3)
