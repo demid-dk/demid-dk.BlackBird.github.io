@@ -1,0 +1,52 @@
+*{
+    font-family: Montserrat;
+}
+/* Контейнеры */
+.con_row{
+    display: flex;
+    flex-direction: row;
+}
+.con_col{
+    display: flex;
+    flex-direction: column;
+}
+/* Header */
+header{
+    position: fixed;
+    background: #222222;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: center;
+}
+#header_wrapper{
+    margin: auto;
+    max-width: 1540px;
+    justify-content: space-between;
+}
+#logo{
+    color: #ffffff;
+    margin: 10px 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+/* Кнопки */
+#buttons{
+    min-width: 250px;
+    justify-content: space-between;
+}
+#buttons>div{
+    height: 30px;
+    padding: 5px;
+    background: #ffffff;
+    margin: 10px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    background-color: #ffffff;
+}
+#buttons>div:hover{
+    cursor: pointer;
+    background-color: #dbdbdb;
+}

@@ -1,0 +1,344 @@
+*{
+    /* text-align: center; */
+    font-family: Montserrat;
+}
+/* Контейнеры */
+.con_row{
+    display: flex;
+    flex-direction: row;
+}
+.con_col{
+    display: flex;
+    flex-direction: column;
+}
+/* Header */
+header{
+    position: fixed;
+    background: #222222;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    width: 100%;
+    justify-content: center;
+}
+#header_wrapper{
+    margin:  auto auto auto 170px;
+    max-width: 1540px;
+    justify-content: space-between;
+}
+#header_wrapper>div{
+    margin: 10px 20px;
+}
+#logo{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+}
+/* Кнопки */
+#buttons{
+    min-width: 200px;
+    justify-content: space-between;
+}
+#buttons>div{
+    height: 30px;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+#buttons>div:hover{
+    cursor: pointer;
+}
+/* -- */
+body{
+    background-color: #58575733;
+}
+/* -- */
+/* Контент */
+.content_wrapper1{
+    height: 108vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+.content_wrapper2{
+    height: 108vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #505050;
+}
+.content_con{
+    margin:  auto auto auto 170px;
+    height: 100%;
+    max-width: 1540px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Блоки с текстами */
+h1{
+    width: 40vw;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 20px;
+}
+h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 20px;
+}
+h3{
+    font-size: 40px;
+    font-weight: 300;
+    margin: 20px;
+}
+.txt1{
+    width: 35vw;
+    color: #222222;
+}
+.txt2{
+    width: 35vw;
+    color: #ffffff;
+}
+/* Images */
+.img{
+    margin: 20px;
+    position: relative;
+}
+.img1::before{
+    position: absolute;
+    display:block;
+    width:150px;
+    height:150px;
+    top:0px;
+    left:0px;
+    content:' ';
+    background: url("../img/before1.png");
+    transform: rotate(90deg);
+}
+.img1::after{
+    position: absolute;
+    display:block;
+    width:200px;
+    height:200px;
+    bottom:0px;
+    right:0px;
+    content:' ';
+    background: url("../img/before1.png");
+    transform: rotate(-90deg);
+}
+.img2::before{
+    position: absolute;
+    display:block;
+    width:150px;
+    height:150px;
+    top:0px;
+    left:0px;
+    content:' ';
+    background: url("../img/before2.png");
+    transform: rotate(90deg);
+}
+.img2::after{
+    position: absolute;
+    display:block;
+    width:150px;
+    height:150px;
+    bottom: 0px;
+    right:0px;
+    content:' ';
+    background: url("../img/before2.png");
+    transform: rotate(-90deg);
+}
+/* 1 страница */
+#fr1{
+    background-image: url("../img/blend_gv004_0022.png");
+    background-repeat: no-repeat;
+    background-position: -125px -150px;
+    background-size: 125%;
+}
+#motto{
+    font-size: 80px;
+    text-align: left;
+    margin-right: 50px;
+}
+/* #fr1_img{
+    height: 50vh;
+    width: 720px;
+    background-image: url("../img/img1.png");
+    background-repeat: no-repeat;
+    background-position: -65px 0;
+    background-size: cover;
+} */
+
+/* 2 страница */
+
+#comfort>*{
+    text-align: left;
+}
+#fr2_img{
+    height: 50vh;
+    width: 720px;
+    background-image: url("../img/img4_1.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    background-size: cover;
+}
+
+/* 3 страница */
+#versatility>*{
+    text-align: left;
+}
+#fr3_img{
+    height: 50vh;
+    width: 720px;
+    background-image: url("../img/img4_1.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    background-size: 120%;
+}
+
+/* 4 страница */
+#modularity>*{
+    text-align: left;
+}
+#fr4_img{
+    height: 50vh;
+    width: 720px;
+    background-image: url("../img/img4_1.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    background-size: 120%;
+}
+
+/* 5 страница */
+#techno>*{
+    text-align: right;
+}
+#fr5_img{
+    height: 50vh;
+    width: 720px;
+    background-image: url("../img/img4_1.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    background-size: cover;
+}
+/* 6 страница */
+#quality{
+    width: 45vw;
+}
+#quality>h2{
+    font-size: 65px;
+}
+#quality>h3{
+    font-size: 45px;
+}
+#eco{
+    width: 45vw;
+}
+#eco>h2{
+    font-size: 65px;
+}
+#eco>h3{
+    font-size: 45px;
+}
+#eco>*{
+    text-align: right;
+}
+/* 7 страница */
+.table_vers{
+    margin: 10px;
+    margin-top: 20vh;
+    min-width: 20vw;
+    min-width: 30vw;
+    height: 700px;
+    justify-self: center;
+    align-content: center;
+}
+.ver_img{
+    height: 50vh;
+    margin: 10px;
+    width: 30vw;
+    background-repeat: no-repeat;
+    background-position: 0px 0;
+    background-size: cover;
+}
+#fr7_img{
+    background-image: url("../img/img4_1.png");
+}
+.ver_buttons{
+    height: 70px;
+    max-width: 20vw;
+}
+.ver_buttons>div{
+    margin: 10px;
+    font-size: 20px;
+    padding: 15px;
+}
+.ver_buttons1>div{
+    height: 50px;
+    color: #ffffff;
+    background: #222222;
+}
+/* 8 страница */
+#fr8_img{
+    background-image: url("../img/img4_1.png");
+}
+.ver_buttons2>div{
+    height: 50px;
+    color: #222222;
+    background: #ffffff;
+}
+/* 9 страница */
+#fr9_img{
+    background-image: url("../img/img4_1.png");
+}
+/* 10 страница */
+#fr10{
+    justify-content: center;
+}
+#fr10>*{
+    margin: 50px;
+}
+#fr10>.txt2{
+    text-align: center;
+}
+#fr10>*>h3{
+    font-weight: 400;
+    font-size: 50px;
+}
+#fr10_config{
+    font-weight: 400;
+    font-size: 40px;
+    align-self: center;
+    padding: 10px;
+    color: #ffffff;
+    background: #222222;
+}
+#fr10_config:hover{
+    cursor: pointer;
+}
+/* @media */
+@media screen and (max-width:1250px) {
+    #header_wrapper{
+        max-width: 1140px;
+    }
+    .content_con{
+        max-width: 1140px;
+    }
+    /* 1 страница */
+    #fr1>*{
+        margin: 20px;
+    }
+    #motto{
+        font-size: 60px;
+    }
+    /* -- */
+    .img{
+        width: 600px;
+    }
+}
