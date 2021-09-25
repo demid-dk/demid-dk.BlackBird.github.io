@@ -1,0 +1,14 @@
+$(".buy_button").click(()=>{
+    $("body").toggleClass("ov_hidden");
+    $("#popup").toggleClass("popup")
+    $("#popup").toggleClass("hidden")
+    $("header").toggleClass("f34")
+    $("header").toggleClass("c22")
+})
+$("#x").click(()=>{
+    $("body").toggleClass("ov_hidden");
+    $("#popup").toggleClass("popup")
+    $("#popup").toggleClass("hidden")
+    $("header").toggleClass("f34")
+    $("header").toggleClass("c22")
+})
