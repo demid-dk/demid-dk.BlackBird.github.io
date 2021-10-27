@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -18,6 +18,17 @@
                 <div id="blackavo" color="#ffffff" href="intent://arvr.google.com/scene-viewer/1.0?file=https://raw.git..;">Black Avocado</div>
                 <div id="config" onclick="location.href='config.html'">Каталог</div>
                 <a href="#popup" id="buy" class="buy_button">Купить</a>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                <span></span>
+                </label>
+                <ul class="menu__box">
+                        <li><a class="menu__item" id="m_i1" style="text-decoration-line: none;">Black Avocado</a></li>
+                        <li><a class="menu__item" id="m_i2" style="text-decoration-line: none;" href="sport.html">Каталог</a></li>
+                        <li><a class="menu__item buy_button" id="m_i3" style="text-decoration-line: none;">Купить</a></li>
+                </ul>
             </div>
         </div>
     </header>
@@ -37,113 +48,94 @@
         </div>
     </div>
     <!-- Слоган  -->
-    <div id="fr1" class="content_wrapper1">
-        <div class="con_row content_con">
-            <h1 id="motto" class="con_col txt1">Умная мебель для всех</h1>
+    <div id="bg2" class="background">
+        <div id="fr1" class="content_wrapper1">
+            <div class="con_row content_con">
+                <h1 id="motto" class="txt1">Умная мебель для всех</h1>
+            </div>
         </div>
     </div>
     <!-- Текст + img -->
-    <div id="fr2" class="content_wrapper2">
-        <div class="con_row content_con">
-            <div id="comfort" class="con_col txt2">
-                <h2>Удобство</h2>
-                <h3>Все ваши желания олицетворяются в нашем столе. Хотите подстаканник - он там будет. Хотите плед - он тоже есть. Все, о чем вы подумаете, тут же воплощается. </h3>
+    <div id="bg2" class="background">
+        <div id="fr2" class="content_wrapper2">
+            <div class="con_row content_con">
+                <div id="comfort" class="con_col txt2">
+                    <h2>Удобство</h2>
+                    <h3>Все ваши желания олицетворяются в нашем столе. Всё, о чем вы подумаете, тут же воплощается. </h3>
+                </div>
             </div>
         </div>
     </div>
-    <div id="fr3" class="content_wrapper1">
-        <div class="con_row content_con">
-            <div id="versatility" class="con_col txt1">
-                <h2>Универсальность</h2>
-                <h3>Мы разработали комплектации для всех категорий клиентов. Работаете ли вы в IT сфере или учитесь в университете - для вас найдется подходящий вариант. </h3>
+    <div id="bg3" class="background">
+        <div id="fr3" class="content_wrapper2">
+            <div class="con_row content_con">
+                <div id="versatility" class="con_col">
+                    <h2>Универсальность</h2>
+                    <h3>Мы разработали комплектации для всех категорий клиентов. Работаете ли вы в IT сфере или учитесь в университете - для вас найдется подходящий вариант. </h3>
+                </div>
             </div>
         </div>
     </div>
-    <div id="fr4" class="content_wrapper2">
-        <div class="con_row content_con">
-            <div id="modularity" class="con_col txt1">
-                <h2>Модульность</h2>
-                <h3>Дополняйте стол на свой вкус. Присоединяйте к нему необходимые блоки, например - колонки. Модернизируйте свою столешницу удобными составляющими. Ваш стол будет таким, каким вы захотите. </h3>
+    <div id="bg4" class="background">
+        <div id="fr4" class="content_wrapper2">
+            <div class="con_row content_con">
+                <div id="modularity" class="con_col txt1">
+                    <h2>Модульность</h2>
+                    <h3>Дополняйте стол на свой вкус. Присоединяйте к нему необходимые блоки, например - колонки. Модернизируйте свою столешницу удобными составляющими. Ваш стол будет таким, каким вы захотите. </h3>
+                </div>
             </div>
         </div>
     </div>
     <div id="fr5" class="content_wrapper2">
-        <div class="con_row content_con">
-            <!-- <div id="techno" class="con_col txt2">
-                <h2>Технологичность</h2>
-                <h3>Приобретаете сразу несколько столов? Гораздо проще объединить их в массив и управлять удаленно. </h3>
-            </div> -->
-        </div>
     </div>
     <!-- Два текста -->
-    <div id="fr6" class="content_wrapper1">
-        <div class="con_row content_con">
-            <div id="quality" class="con_col txt2">
-                <h2>Качество</h2>
-                <h3>Все столы собираются вручную, а материалы проходят проверку на износостойкость. </h3>
-            </div>
-            <div id="eco" class="txt2">
-                <h2>Экологичность</h2>
-                <h3>Вы сами выбираете подходящие материалы. Мы можем изготовить стол как из дерева, так и из переработанного пластика. </h3>
+    <div id="bg6" class="background">
+        <div id="fr6" class="content_wrapper2">
+            <div class="con_row content_con">
+                <div id="quality" class="con_col txt2">
+                    <h2>Качество</h2>
+                    <h3>Все столы собираются вручную, а материалы проходят проверку на износостойкость. </h3>
+                </div>
+                <div id="eco" class="txt2">
+                    <h2>Современность</h2>
+                    <h3>Вы сами выбираете подходящие материалы. Мы можем изготовить стол как из дерева, так и из переработанного пластика. </h3>
+                </div>
             </div>
         </div>
     </div>
     <!-- Столы -->
-    <div id="fr7" class="content_wrapper1">
-        <div class="con_row content_con">
-            <div class="txt_vers con_col txt2">
-                <h2>Первая версия</h2>
-                <h3>Подойдет тем, кто много работает с бумагами. Например, станет отличным вариантом для офисных работников или студентов.</h3>
-            </div>
-            <!-- <div class="table_vers con_col">
-                <div class="ver_img" id="fr7_img"></div>
-                <div class="ver_buttons ver_buttons1 con_row">
-                    <div class="ver_price">Цена: 55 000</div>
-                    <div class="buy_button ver_buy">Купить</div>
+    <div id="bg7" class="background">
+        <div id="fr7" class="content_wrapper1">
+            <div class="con_row content_con">
+                <div class="txt_vers con_col txt2">
+                    <h2>Первая версия</h2>
+                    <h3>Подойдет тем, кто много работает с бумагами. Например, станет отличным вариантом для офисных работников или студентов.</h3>
                 </div>
-            </div> -->
+
+            </div>
         </div>
     </div>
-    <div id="fr8" class="content_wrapper2">
-        <div class="con_row content_con">
-            <div class="txt_vers con_col txt2">
-                <h2>Вторая версия</h2>
-                <h3>Станет подходящим решением для тех, кто работает в IT сфере.</h3>
-            </div>
-            <div class="table_vers con_col">
-                <div class="ver_img" id="fr8_img"></div>
-                <div class="ver_buttons ver_buttons2 con_row">
-                    <div class="ver_price">Цена: 65 000</div>
-                    <div class="buy_button ver_buy">Купить</div>
+    <div id="bg8" class="background">
+        <div id="fr8" class="content_wrapper1">
+            <div class="con_row content_con">
+                <div class="txt_vers con_col txt2">
+                    <h2>Вторая версия</h2>
+                    <h3>Станет подходящим решением для тех, кто работает в IT сфере.</h3>
                 </div>
             </div>
         </div>
     </div>
-    <div id="fr9" class="content_wrapper1">
-        <div class="con_row content_con">
-            <div class="txt_vers con_col txt1">
-                <h2>Третья версия</h2>
-                <h3>Станет подходящим решением для тех, кто работает в IT сфере.</h3>
-            </div>
-            <div class="table_vers con_col">
-                <div class="ver_img" id="fr9_img"></div>
-                <div class="ver_buttons ver_buttons1 con_row">
-                    <div class="ver_price">Цена: 75 000</div>
-                    <div class="ver_buy buy_button">Купить</div>
+    <div id="bg9" class="background">
+        <div id="fr9" class="content_wrapper1">
+            <div class="con_row content_con">
+                <div class="txt_vers con_col txt2">
+                    <h2>Третья версия</h2>
+                    <h3>Станет подходящим решением для тех, кто работает в IT сфере.</h3>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div id="fr10" class="content_wrapper2">
-        <div class="con_col content_con">
-            <div class="con_col txt2">
-                <h2>Не нашли того, что Вам нужно или хотите что-то наиболее оригинальное?</h2>
-                <h3>Для Вас есть</h3>
-                <div onclick="location.href='config.html'" id="fr10_config" class="ver_buy">Конфигуратор</div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/b.js"></script>
+    <script src="../js/b.js"></script>
 </body>
 </html>
