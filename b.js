@@ -12,7 +12,7 @@ $("#x").click(()=>{
     $("header").toggleClass("f34")
     $("header").toggleClass("c22")
 })
-$(window).resize(function () {
+function widthResize(){
     var width = window.innerWidth
     if (width <= 768) {
         $('.content_con').removeClass('con_row').addClass('con_col');
@@ -20,4 +20,5 @@ $(window).resize(function () {
     else{
         $('.content_con').addClass('con_row').removeClass('con_col');
     }
-});
+}
+setInterval(widthResize, 1000/60)
