@@ -16,13 +16,13 @@ header{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 1000;
+    z-index: 950;
     width: 100%;
-    justify-content: center;
 }
 #header_wrapper{
-    margin:  auto auto auto 170px;
-    max-width: 1540px;
+    margin: 0px auto;
+    max-width: 1500px;
+    justify-content: space-between;
 }
 #logo{
     color: #ffffff;
@@ -33,7 +33,7 @@ header{
 /* Кнопки */
 #buttons{
     margin: 10px 20px;
-    margin-left: 815px;
+    /* margin-left: 45vw; */
     justify-content: space-between;
 }
 #buttons>*{
@@ -50,7 +50,110 @@ header{
     cursor: pointer;
 }
 #blackavo{
-    width: 170px;
+    white-space: nowrap;
+}
+/* Menu */
+.hamburger-menu{
+    display: none;
+}
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #f3f1f1;
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0px;
+}
+#menu__toggle:checked ~ body{
+    overflow-x: hidden;
+}
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #f3f1f1;
+
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -10px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 10px;
+
+}
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -250px;
+    z-index: 1000;
+
+    width: 250px;
+    height: 100%;
+
+    margin: 0;
+    padding: 80px 0;
+
+    list-style: none;
+
+    background-color: #1d1e1f;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+    transition-duration: .25s;
+}
+
+.menu{
+    padding: 2vh 5vh 5vh;
+    display: flex;
+    justify-content: space-around;
+    height: 5vh;
+}
+.menu__item {
+    display: block;
+    padding: 12px 25px;
+
+    color: rgb(255, 254, 254);
+
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 3vh;
+    font-weight: 1000;
+    text-decoration-line: none;
+    transition-duration: .25s;
+}
+.menu__item:hover{
+    color: rgb(194, 191, 191);
 }
 /* -- */
 body{
@@ -60,26 +163,24 @@ body{
 /* Контент */
 .content_wrapper1{
     height: 108vh;
-    width: 100%;
+    max-width: 100%;
     justify-content: center;
-    background: #ffffff;
 }
 .content_wrapper2{
     height: 108vh;
-    width: 100%;
+    max-width: 100%;
     justify-content: center;
-    background: #505050;
 }
 .content_con{
-    margin: auto auto auto 170px;
-    height: 108vh;
-    max-width: 1540px;
+    margin: auto;
+    height: 100%;
+    max-width: 1500px;
     justify-content: space-between;
 }
 
 /* Блоки с текстами */
 h1{
-    width: 40vw;
+    max-width: 40vw;
     font-size: 60px;
     font-weight: 700;
     margin: 20px;
@@ -95,61 +196,10 @@ h3{
     margin: 20px;
 }
 .txt1{
-    width: 35vw;
     color: #222222;
 }
 .txt2{
-    width: 35vw;
     color: #ffffff;
-}
-/* Images */
-.img{
-    margin: 20px;
-    position: relative;
-}
-.img1::before{
-    position: absolute;
-    display: block;
-    width: 150px;
-    height: 150px;
-    top: 0px;
-    left: 0px;
-    content:' ';
-    background: url("../img/before1.png");
-    transform: rotate(90deg);
-}
-.img1::after{
-    position: absolute;
-    display: block;
-    width: 150px;
-    height: 150px;
-    bottom: -1px;
-    right: 0px;
-    content: ' ';
-    background: url("../img/before1.png");
-    transform: rotate(-90deg);
-}
-.img2::before{
-    position: absolute;
-    display: block;
-    width: 150px;
-    height: 150px;
-    top: 0px;
-    left: 0px;
-    content: ' ';
-    background: url("../img/before2.png");
-    transform: rotate(90deg);
-}
-.img2::after{
-    position: absolute;
-    display: block;
-    width: 150px;
-    height: 150px;
-    bottom: -1px;
-    right: 0px;
-    content:' ';
-    background: url("../img/before2.png");
-    transform: rotate(-90deg);
 }
 /* hidden */
 .ov_hidden{
@@ -198,7 +248,7 @@ h3{
 /* Сетка */
 #grid25{
     margin: auto;
-    width: 45%;
+    max-width: 1050px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -263,25 +313,21 @@ h3{
     align-self: center;
     margin-right: 50px;
 }
-/* #fr1_img{
-    height: 50vh;
-    width: 720px;
-    background-image: url("../img/img1.png");
-    background-repeat: no-repeat;
-    background-position: -65px 0;
-    background-size: cover;
-} */
 
 /* 2 страница */
+
 #fr2{
     background-image: url("../img/24.png");
     background-repeat: no-repeat;
     background-position: 0px 0;
     background-size: cover;
 }
+#bg2{
+    background-color: #7ca7ac;
+}
 #comfort{
-    margin-top: 300px;
-    max-width: 430px;
+    margin-top: 500px;
+    max-width: 20vw;
 }
 #comfort>h2{
     font-size:40px;
@@ -303,17 +349,13 @@ h3{
 }
 #versatility{
     width: 100%;
-    margin: 20px;
-    margin-top: 40px;
+    /* margin: 20px; */
+    margin-top: 12vh;
     align-content: center;
 }
 #versatility>*{
     text-align: center;
-    color: #1e2b4d;
-}
-#fr3_img{
-    height: 50vh;
-    width: 720px;
+    color: #cfcdcd;
 }
 
 /* 4 страница */
@@ -326,7 +368,7 @@ h3{
 #modularity{
     width: 100%;
     align-content: center;
-    margin-top: 40px;
+    margin-top: 12vh;
 }
 #modularity>h2{
     text-align: center;
@@ -345,9 +387,6 @@ h3{
     background-position: -20px -20px;
     background-size: 105%;
 }
-#techno>*{
-    text-align: right;
-}
 /* 6 страница */
 #fr6{
     background-image: url("../img/25.png");
@@ -356,7 +395,7 @@ h3{
     background-size: 105%;
 }
 #quality{
-    width: 45vw;
+    max-width: 45vw;
     margin-top: 100px;
 }
 #quality>h2{
@@ -366,8 +405,8 @@ h3{
     font-size: 45px;
 }
 #eco{
-    width: 45vw;
-    margin-top: 330px;
+    max-width: 45vw;
+    margin-top: 45vh;
 }
 #eco>h2{
     font-size: 65px;
@@ -381,86 +420,33 @@ h3{
 /* 7 страница */
 #fr7{
     background-image: url("../img/31.png");
-    background-position: 0 0;
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: -750px -250px;
+    background-size: 150%;
 }
 .txt_vers{
+    max-width: 35vw;
     margin: 10px;
     margin-top: 200px;
 }
-.table_vers{
-    margin: 10px;
-    margin-top: 20vh;
-    min-width: 20vw;
-    min-width: 30vw;
-    height: 700px;
-    justify-self: center;
-    align-content: center;
-}
-.ver_img{
-    height: 50vh;
-    margin: 10px;
-    width: 30vw;
-    background-repeat: no-repeat;
-    background-position: 0px 0;
-    background-size: cover;
-}
-#fr7_img{
-    background-image: url("../img/img4_1.png");
-}
-.ver_buttons{
-    height: 70px;
-    max-width: 20vw;
-}
-.ver_buttons>div{
-    margin: 10px;
-    font-size: 20px;
-    padding: 15px;
-}
-.ver_buttons1>div{
-    height: 50px;
-    color: #ffffff;
-    background: #222222;
-}
 /* 8 страница */
-#fr8_img{
-    background-image: url("../img/img4_1.png");
+#fr8{
+    background-image: url("../img/32.png");
+    background-repeat: no-repeat;
+    background-position: -750px -250px;
+    background-size: 150%;
 }
-.ver_buttons2>div{
-    height: 50px;
-    color: #222222;
-    background: #ffffff;
-}
+
 /* 9 страница */
-#fr9_img{
-    background-image: url("../img/img4_1.png");
+#fr9{
+    height: 100vh;
+
+    background-image: url("../img/33.png");
+    background-repeat: no-repeat;
+    background-position: -750px -250px;
+    background-size: 150%;
 }
-/* 10 страница */
-#fr10{
-    justify-content: center;
-}
-#fr10>*{
-    margin: 50px;
-    align-self: center;
-}
-#fr10>.txt2{
-    text-align: center;
-}
-#fr10>*>h3{
-    font-weight: 400;
-    font-size: 50px;
-}
-#fr10_config{
-    font-weight: 400;
-    font-size: 40px;
-    align-self: center;
-    padding: 10px;
-    color: #ffffff;
-    background: #222222;
-}
-#fr10_config:hover{
-    cursor: pointer;
-}
+
 /* Colors */
 .c22{
     background: #222222;
@@ -469,44 +455,249 @@ h3{
     background: #252f34;
 }
 /* @media */
-@media screen and (max-width:1500px) {
-    #header_wrapper{
-        max-width: calc(100vw - 100px);
-        margin: auto 50px;
+@media screen and (max-width:1380px) {
+    #fr1{
+        background-position: -650px -200px;
+        background-size: 180%;
     }
-    .content_con{
-        max-width: calc(100vw - 100px);
-        margin: auto 50px;
+    /* 6 страница */
+    #fr6{
+        background-image: url("../img/25.png");
+        background-repeat: no-repeat;
+        background-position: -20px 0;
+        background-size: 105%;
     }
-    .ver_buttons{
-        height: 70px;
-        max-width: 20vw;
+    #quality{
+        max-width: 45vw;
+        margin-top: 100px;
     }
-    .ver_buttons>div{
-        margin: 10px;
-        font-size: 17px;
-        padding: 15px;
+    #quality>h2{
+        font-size: 55px;
+    }
+    #quality>h3{
+        font-size: 35px;
+    }
+    #eco{
+        max-width: 45vw;
+        margin-top: 100px;
+        /* margin-top: 45vh; */
+    }
+    #eco>h2{
+        font-size: 55px;
+    }
+    #eco>h3{
+        font-size: 35px;
+    }
+    #eco>*{
+        text-align: right;
     }
 }
-
-@media screen and (max-width:1250px) {
+@media screen and (max-width:1200px) {
     #header_wrapper{
-        max-width: calc(100vw - 100px);
+        max-width: 1000px;
     }
     .content_con{
-        max-width: calc(100vw - 100px);
+        max-width: 1000px;
+    }
+    #grid25{
+        max-width: 1000px;
     }
     #fr1{
         background-position: -280px 0;
-        background-size: 150%;
-    }
-    #fr1>*{
-        margin: 20px;
+        background-size: 175%;
     }
     #motto{
         font-size: 60px;
     }
-    .img{
-        width: 600px;
+    #fr3{
+        background-position: 0px 0px;
+        background-size: 300%;
+    }
+}
+@media screen and (max-width:992px){
+    #header_wrapper{
+        max-width: 900px;
+        margin: 0;
+    }
+}
+@media screen and (max-width:768px){
+    header{
+        width: 100vw;
+    }
+    #header_wrapper{
+        width: 100vw;
+    }
+    #menu__toggle:checked ~ .menu__btn > span,
+    .menu_btn > span::before,
+    .menu_btn > span::after {
+        position: fixed;
+    }
+    #buttons{
+        display: none;
+    }
+    .hamburger-menu{
+        display: flex;
+        margin: 10px;
+        margin-right: 50px;
+    }
+    .menu_text{
+        display: none;
+    }
+    .content_wrapper1{
+        max-height: 105vh;
+    }
+    .content_wrapper2{
+        max-height: 52vh;
+    }
+    /* Страницы */
+    .content_con{
+        max-width: none;
+        max-height: none;
+    }
+    /* 1 страница */
+    #fr1{
+        background-image: url("../img/1_2.png");
+        background-position: center;
+        background-size: cover;
+    }
+    #fr1>.content_con{
+        justify-content: flex-start;
+    }
+    #motto{
+        margin-top: 70px;
+        font-size: 50px;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        text-shadow: 1px 0 1px #f3f1f1, 0 1px 1px #f3f1f1, -1px 0 1px #f3f1f1, 0 -1px 1px #f3f1f1;
+    }
+    /* 2 страница */
+    #fr2{
+        background-size: cover;
+    }
+    #comfort>h2{
+        font-size: 30px;
+        max-width: none;
+    }
+    #comfort>h3{
+        font-size: 20px;
+        max-width: 40vw;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    /* 3 страница */
+    #fr3{
+        background-size: cover;
+    }
+    #versatility{
+        margin-top: 20px;
+    }
+    /* 4 страница */
+    #fr4{
+        background-size: cover;
+        background-position: center;
+    }
+    #modularity{
+        margin-top: 20px;
+    }
+    #modularity>h2{
+        font-size: 30px;
+    }
+    #modularity>h3{
+        font-size: 25px;
+    }
+    #modularity>*{
+        margin: 5px;
+    }
+    /* 5 страница */
+    #fr5{
+        background-position: 0px;
+        background-size: cover;
+    }
+    /* FR6 */
+    #fr6{
+        background-image: url("../img/25.png");
+        background-repeat: no-repeat;
+        background-position: -20px 0;
+        background-size: cover;
+    }
+    #fr6>.content_con{
+        flex-direction: column;
+    }
+    #quality{
+        margin-top: 50px;
+    }
+    #quality>h2{
+        font-size: 30px;
+    }
+    #quality>h3{
+        font-size: 25px;
+    }
+    #eco{
+        margin-top: 50px;
+    }
+    #eco>h2{
+        font-size: 30px;
+    }
+    #eco>h3{
+        font-size: 25px;
+    }
+    /* 7 страница */
+    #fr7{
+        background-image: url("../img/31.png");
+        background-repeat: no-repeat;
+        background-position: -875px;
+        background-size: cover;
+    }
+    .txt_vers{
+        max-width: 35vw;
+        margin: 10px;
+        margin-top: 50px;
+    }
+    /* 8 страница */
+    #fr8{
+        background-image: url("../img/32.png");
+        background-repeat: no-repeat;
+        background-position: -875px;
+        background-size: cover;
+    }
+
+    /* 9 страница */
+    #fr9{
+        background-image: url("../img/33.png");
+        background-repeat: no-repeat;
+        background-position: -875px;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 500px){
+    #fr1{
+        background-size: 140%;
+        background-position: center 5vh;
+        max-height: 100vh;
+    }
+}
+@media screen and (max-height: 800px){
+    #comfort{
+        font-size: 20px;
+        margin-top: 120px;
+    }
+    #comfort>*{
+        margin: 15px;
+    }
+}
+@media screen and (max-height: 700px){
+    #comfort{
+        /* font-size: 15px; */
+        margin-top: 50px;
+    }
+}
+@media screen and (max-height: 600px){
+    #comfort{
+        margin-top: 0;
     }
 }
