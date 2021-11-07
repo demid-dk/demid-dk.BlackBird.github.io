@@ -88,6 +88,7 @@ h1{
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }
+
 #grid25>input{
     background: #5e5e5e;
     height: 48px;

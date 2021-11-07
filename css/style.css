@@ -161,13 +161,8 @@ body{
 }
 /* -- */
 /* Контент */
-.content_wrapper1{
-    height: 108vh;
-    max-width: 100%;
-    justify-content: center;
-}
-.content_wrapper2{
-    height: 108vh;
+.content_wrapper{
+    height: 103vh;
     max-width: 100%;
     justify-content: center;
 }
@@ -188,12 +183,12 @@ h1{
 h2{
     font-size: 50px;
     font-weight: 600;
-    margin: 20px;
+    padding: 15px;    
 }
 h3{
     font-size: 40px;
     font-weight: 300;
-    margin: 20px;
+    padding: 15px;    
 }
 .txt1{
     color: #222222;
@@ -224,7 +219,7 @@ h3{
     max-width: 1540px;
     margin: auto;
     align-self: center;
-    justify-content: center;
+    justify-items: center;
     align-content: center;
     overflow-y: auto;
     overflow-x: hidden;
@@ -245,9 +240,10 @@ h3{
     font-size: 150px;
     font-weight: 600;
 }
+
 /* Сетка */
 #grid25{
-    margin: auto;
+    /* margin: auto; */
     max-width: 1050px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -259,7 +255,7 @@ h3{
     background: #333b41;
     height: 48px;
     font-size: 20px;
-    padding: 25px 15px;
+    padding: 15px;
     border-bottom: 2px solid #ffffff;
     color: #ffffff;
 }
@@ -273,7 +269,7 @@ h3{
     height: 98px;
     background: #333b41;
     font-size: 20px;
-    padding: 25px 15px;
+    padding: 15px 15px;
     border-bottom: 2px solid #ffffff;
     resize: none;
     color: #ffffff;
@@ -300,6 +296,7 @@ h3{
 #input5:hover{
     background-color: #d4d4d4;
 }
+
 /* 1 страница */
 #fr1{
     background-image: url("../img/1.png");
@@ -315,18 +312,18 @@ h3{
 }
 
 /* 2 страница */
-
 #fr2{
-    background-image: url("../img/24.png");
+    background-image: url("../img/24_1.png");
     background-repeat: no-repeat;
-    background-position: 0px 0;
+    background-position-x: 0px;
+    background-position-y: 0px;
     background-size: cover;
 }
 #bg2{
     background-color: #7ca7ac;
 }
 #comfort{
-    margin-top: 500px;
+    margin: 100px 5px 0px;
     max-width: 20vw;
 }
 #comfort>h2{
@@ -349,13 +346,13 @@ h3{
 }
 #versatility{
     width: 100%;
-    /* margin: 20px; */
-    margin-top: 12vh;
+    margin-top: 100px;
     align-content: center;
 }
 #versatility>*{
     text-align: center;
     color: #cfcdcd;
+    width: 100%;
 }
 
 /* 4 страница */
@@ -367,17 +364,18 @@ h3{
 }
 #modularity{
     width: 100%;
+    margin: 100px 0px 0px;
     align-content: center;
-    margin-top: 12vh;
 }
 #modularity>h2{
     text-align: center;
     font-size: 50px;
+    width: 100%;
 }
 #modularity>h3{
     text-align: center;
     font-size: 40px;
-    max-height: 150px;
+    width: 100%;
 }
 
 /* 5 страница */
@@ -395,6 +393,10 @@ h3{
     background-size: 105%;
 }
 #quality{
+    /* background: #5f5d6d; */
+    border-radius: 15px;
+    height: fit-content;
+    padding: 15px;
     max-width: 45vw;
     margin-top: 100px;
 }
@@ -404,9 +406,18 @@ h3{
 #quality>h3{
     font-size: 45px;
 }
+#quality>*{
+    margin: 5px;
+    word-wrap: break-word;
+}
 #eco{
+    align-self:  flex-end;
+    /* background: #5f5d6d; */
+    border-radius: 15px;
+    height: fit-content;
+    padding: 15px;
     max-width: 45vw;
-    margin-top: 45vh;
+    margin-bottom: 50px;
 }
 #eco>h2{
     font-size: 65px;
@@ -415,7 +426,9 @@ h3{
     font-size: 45px;
 }
 #eco>*{
+    margin: 5px;
     text-align: right;
+    word-wrap: break-word;
 }
 /* 7 страница */
 #fr7{
@@ -426,8 +439,7 @@ h3{
 }
 .txt_vers{
     max-width: 35vw;
-    margin: 10px;
-    margin-top: 200px;
+    margin: 200px 5px 0px;
 }
 /* 8 страница */
 #fr8{
@@ -436,7 +448,6 @@ h3{
     background-position: -750px -250px;
     background-size: 150%;
 }
-
 /* 9 страница */
 #fr9{
     height: 100vh;
@@ -455,6 +466,26 @@ h3{
     background: #252f34;
 }
 /* @media */
+@media screen and (max-width:1500px) {
+    .txt{
+        max-width: 1440px;
+    }
+    #versatility{
+        margin: 20px 0 0;
+    }
+    #fr7{
+        background-size: cover;
+        background-position: 0 0;
+    }
+    #fr8{
+        background-size: cover;
+        background-position: 0 0;
+    }
+    #fr9{
+        background-size: cover;
+        background-position: 0 0;
+    }
+}
 @media screen and (max-width:1380px) {
     #fr1{
         background-position: -650px -200px;
@@ -462,7 +493,6 @@ h3{
     }
     /* 6 страница */
     #fr6{
-        background-image: url("../img/25.png");
         background-repeat: no-repeat;
         background-position: -20px 0;
         background-size: 105%;
@@ -480,7 +510,6 @@ h3{
     #eco{
         max-width: 45vw;
         margin-top: 100px;
-        /* margin-top: 45vh; */
     }
     #eco>h2{
         font-size: 55px;
@@ -503,21 +532,177 @@ h3{
         max-width: 1000px;
     }
     #fr1{
-        background-position: -280px 0;
-        background-size: 175%;
+        background-position: -650px -150px;
+        background-size: 190%;
+    }
+    #motto{
+        font-size: 50px;
+        max-width: 350px;
+    }
+    #fr3{
+        height: 105vh;
+        background-size: 220%;
+        background-position: 0 -50px;
+    }
+    #versatility>*{
+        margin: 15px;
+    }
+    #versatility>h2{
+        font-size: 35px;
+    }
+    #versatility>h3{
+        font-size: 30px;
+    }
+    #modularity>*{
+        margin: 15px;
+    }
+    #modularity>h2{
+        font-size: 40px;
+    }
+    #modularity>h3{
+        font-size: 35px;
+    }
+    #fr4{
+        background-position: -570px -35px;
+        background-size: 190%;
+    }
+    #fr5{
+        background-position: -100px 0;
+        background-size: cover;
+    }
+}
+@media screen and (max-width:1065px){
+    #fr1{
+        background-position: -800px -150px;
+        background-size: 220%;
     }
     #motto{
         font-size: 60px;
+        max-width: 300px;
     }
-    #fr3{
-        background-position: 0px 0px;
-        background-size: 300%;
+    #fr5{
+        background-position: -200px 0;
+        background-size: cover;
+    }
+    #fr6{
+        background-position: -100px 0;
+        background-size: cover;
+    }
+    #quality{
+        max-width: 35vw;
+        margin-top: 50px;
+    }
+    #quality>h2{
+        font-size: 35px;
+    }
+    #quality>h3{
+        font-size: 30px;
+    }
+    #eco{
+        max-width: 35vw;
+        margin-bottom: 70px;
+    }
+    #eco>h2{
+        font-size: 35px;
+    }
+    #eco>h3{
+        font-size: 30px;
     }
 }
-@media screen and (max-width:992px){
+@media screen and (max-width:1015px){
     #header_wrapper{
         max-width: 900px;
-        margin: 0;
+    }
+    .content_con{
+        max-width: 900px;
+    }
+    #fr1{
+        background-position: -750px -150px;
+        background-size: 220%;
+    }
+    #motto{
+        font-size: 45px;
+        max-width: 250px;
+    }
+    #fr2{
+        height: 100vh;
+        background-position-x: -200px;
+    }
+    #fr3{
+        background-image: url("../img/2_1.png");
+        background-size: 100%;
+        background-position: 0 -70px;
+    }
+    #fr3_cc{
+        justify-content: flex-end;
+    }
+    #versatility{
+        max-width: 43vw;
+        max-height: 50%;
+        margin: auto 15px;
+    }
+    #versatility>h2{
+        font-size: 30px;
+    }
+    #versatility>h3{
+        font-size: 30px;
+    }
+    #fr4{
+        height: 100vh;
+        background-image: url("../img/23_3.png");
+        background-size: 100%;
+        background-position: 0 0;
+    }
+    #fr4_cc{
+        justify-content: flex-start;
+    }
+    #modularity{
+        max-width: 43vw;
+        max-height: 50%;
+    }
+    #modularity>h2{
+        font-size: 35px;
+    }
+    #modularity>h3{
+        font-size: 35px;
+    }
+    /* 5 страница */
+    #fr5{
+        background-position: -250px 0;
+        background-size: cover;
+    }
+    /* 6 страница */
+    #fr6{
+        background-image: url("../img/25.png");
+        background-repeat: no-repeat;
+        background-position: -20px 0;
+        background-size: cover;
+    }
+    #quality>h2{
+        font-size: 30px;
+    }
+    #quality>h3{
+        font-size: 25px;
+    }
+    #eco>h2{
+        font-size: 30px;
+    }
+    #eco>h3{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:900px){
+    /* 5 страница */
+    #fr5{
+        background-position: -320px 0;
+        background-size: cover;
+    }
+}
+@media screen and (max-width:850px){
+    /* 5 страница */
+    #fr5{
+        background-position: -380px 0;
+        background-size: cover;
     }
 }
 @media screen and (max-width:768px){
@@ -554,6 +739,10 @@ h3{
         max-width: none;
         max-height: none;
     }
+    /* Popup */
+    #data{
+        font-size: 35px;
+    }
     /* 1 страница */
     #fr1{
         background-image: url("../img/1_2.png");
@@ -569,40 +758,40 @@ h3{
         text-align: center;
         align-self: center;
         width: 100%;
-        text-shadow: 1px 0 1px #f3f1f1, 0 1px 1px #f3f1f1, -1px 0 1px #f3f1f1, 0 -1px 1px #f3f1f1;
+        text-shadow: 1px 0 2px #b6b6b6, 0 1px 2px #b6b6b6, -1px 0 2px #b6b6b6, 0 -1px 2px #b6b6b6;
     }
     /* 2 страница */
     #fr2{
         background-size: cover;
+        background-position-x: -400px;
     }
     #comfort>h2{
-        font-size: 30px;
         max-width: none;
     }
     #comfort>h3{
-        font-size: 20px;
         max-width: 40vw;
-    }
-    h2{
-        font-size: 30px;
-    }
-    h3{
-        font-size: 20px;
     }
     /* 3 страница */
     #fr3{
+        max-height: 100vh;
         background-size: cover;
+        background-position: 0 -20px;
     }
-    #versatility{
-        margin-top: 20px;
+    #versatility>h2{
+        font-size: 20px;
+    }
+    #versatility>h3{
+        font-size: 20px;
     }
     /* 4 страница */
     #fr4{
-        background-size: cover;
-        background-position: center;
+        max-height: 95vh;
+        background-image: url("../img/23_4.png");
+        background-position: -450px 0;
+        background-size: auto 100%;
     }
     #modularity{
-        margin-top: 20px;
+        margin-top: 90px;
     }
     #modularity>h2{
         font-size: 30px;
@@ -615,10 +804,10 @@ h3{
     }
     /* 5 страница */
     #fr5{
-        background-position: 0px;
-        background-size: cover;
+        background-position: -1000px 0;
+        background-size: 200%;
     }
-    /* FR6 */
+    /* 6 страница */
     #fr6{
         background-image: url("../img/25.png");
         background-repeat: no-repeat;
@@ -649,55 +838,140 @@ h3{
     /* 7 страница */
     #fr7{
         background-image: url("../img/31.png");
-        background-repeat: no-repeat;
-        background-position: -875px;
+        background-position: -350px 0;
         background-size: cover;
     }
     .txt_vers{
         max-width: 35vw;
-        margin: 10px;
         margin-top: 50px;
     }
     /* 8 страница */
     #fr8{
         background-image: url("../img/32.png");
-        background-repeat: no-repeat;
-        background-position: -875px;
+        background-position: -350px 0;
         background-size: cover;
     }
 
     /* 9 страница */
     #fr9{
         background-image: url("../img/33.png");
-        background-repeat: no-repeat;
-        background-position: -875px;
+        background-position: -350px 0;
         background-size: cover;
+    }
+}
+@media screen and (max-width: 600px){
+    /* Popup */
+    #data{
+        font-size: 30px;
+    }
+    #comfort>h2{
+        font-size: 25px;
+    }
+    .txt_vers{
+        width: 100%;
+    }
+    #fr7_cc{
+        align-items: center;
+        width: 100%;
+    }
+    #fr7_cc{
+        align-items: center;
+        width: 100%;
     }
 }
 @media screen and (max-width: 500px){
     #fr1{
-        background-size: 140%;
-        background-position: center 5vh;
+        background-image: url("../img/1_3.png");
+        background-size: cover;
+        background-position: center;
         max-height: 100vh;
+    }
+    #motto{
+        font-size: 40px;
+    }
+    #comfort>h2{
+        font-size: 20px;
+    }
+    #comfort>h3{
+        font-size: 15px;
+    }
+    #fr3{
+        height: 95vh;
+        background-size: 100%;
+    }
+    #fr4{
+        height: 80vh;
+        background-position: -150px -20px;
+        background-size: 150%;
+    }
+    #modularity{
+        height: fit-content;
+    }
+    #fr5{
+        background-position: -300px -90px;
+    }
+}
+@media screen and (max-height: 900px){
+    #comfort{
+        font-size: 20px;
+        margin-top: 150px;
+    }
+}
+@media screen and (max-height: 850px){
+    #comfort{
+        font-size: 20px;
+        margin-top: 125px;
     }
 }
 @media screen and (max-height: 800px){
     #comfort{
         font-size: 20px;
-        margin-top: 120px;
+        margin-top: 100px;
     }
-    #comfort>*{
-        margin: 15px;
+    #modularity{
+        margin-top: 80px;
+    }
+    #fr5{
+        height: 105vh;
+    }
+}
+@media screen and (max-height: 750px){
+    #data{
+        margin: 100px auto 20px;
+    }
+    #comfort{
+        font-size: 20px;
+        margin-top: 50px;
     }
 }
 @media screen and (max-height: 700px){
-    #comfort{
-        /* font-size: 15px; */
+    #data{
+        margin: 80px auto 20px;
+    }
+    #modularity{
         margin-top: 50px;
+    }
+    #fr5{
+        background-position: 0 0;
+        background-size: cover;
     }
 }
 @media screen and (max-height: 600px){
     #comfort{
-        margin-top: 0;
+        margin-top: 40px;
+    }
+    #comfort>*{
+        padding: 10px;
+    }
+    #modularity{
+        margin-top: 25px;
+    }
+    #fr5{
+        background-position: 0 -70px;
+    }
+}
+@media screen and (min-width:1740px) {
+    #comfort{
+        margin-top: 300px;
     }
 }
