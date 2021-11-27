@@ -1,6 +1,18 @@
 *{
-    /* text-align: center; */
     font-family: Montserrat;
+    scrollbar-width: 10px;
+}
+*::-webkit-scrollbar {
+    height: 20px;
+    width: 10px;
+}
+*::-webkit-scrollbar-track{
+    background: #333b41;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #d6d6d6;
+    border-radius: 5px;
+    border: 2px solid #333b41;
 }
 /* Контейнеры */
 .con_row{
@@ -109,7 +121,6 @@ header{
 .menu__btn > span::after {
     content: '';
     top: 10px;
-
 }
 .menu__box {
     display: block;
@@ -187,8 +198,9 @@ h2{
 }
 h3{
     font-size: 40px;
-    font-weight: 300;
-    padding: 15px;    
+    font-weight: 400;
+    padding: 15px;
+    height: fit-content; 
 }
 .txt1{
     color: #222222;
@@ -327,10 +339,10 @@ h3{
     max-width: 20vw;
 }
 #comfort>h2{
-    font-size:40px;
+    font-size:50px;
 }
 #comfort>h3{
-    font-size: 35px;
+    font-size: 40px;
 }
 #comfort>*{
     text-align: left;
@@ -343,6 +355,9 @@ h3{
     background-repeat: no-repeat;
     background-position: 0px 0px;
     background-size: 100%;
+}
+#versatility_h2_1{
+    display: none;
 }
 #versatility{
     width: 100%;
@@ -361,6 +376,9 @@ h3{
     background-repeat: no-repeat;
     background-position: -20px 0;
     background-size: 105%;
+}
+#modularity_h2_1{
+    display: none;
 }
 #modularity{
     width: 100%;
@@ -412,7 +430,6 @@ h3{
 }
 #eco{
     align-self:  flex-end;
-    /* background: #5f5d6d; */
     border-radius: 15px;
     height: fit-content;
     padding: 15px;
@@ -473,6 +490,9 @@ h3{
     #versatility{
         margin: 20px 0 0;
     }
+    #modularity{
+        margin: 20px 0 0;
+    }
     #fr7{
         background-size: cover;
         background-position: 0 0;
@@ -490,6 +510,15 @@ h3{
     #fr1{
         background-position: -650px -200px;
         background-size: 180%;
+    }
+    #fr3{
+        height: 80vh;
+    }
+    #fr4{
+        height: 80vh;
+    }
+    #fr5{
+        height: 80vh;
     }
     /* 6 страница */
     #fr6{
@@ -520,6 +549,15 @@ h3{
     #eco>*{
         text-align: right;
     }
+    #fr7{
+        background-position-x: -100px;
+    }
+    #fr8{
+        background-position-x: -100px;
+    }
+    #fr9{
+        background-position-x: -100px;
+    }
 }
 @media screen and (max-width:1200px) {
     #header_wrapper{
@@ -540,12 +578,11 @@ h3{
         max-width: 350px;
     }
     #fr3{
-        height: 105vh;
-        background-size: 220%;
-        background-position: 0 -50px;
-    }
-    #versatility>*{
-        margin: 15px;
+        height: 80vh;
+        background-image: url("../img/2_2.png");
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: 0px;
     }
     #versatility>h2{
         font-size: 35px;
@@ -553,18 +590,18 @@ h3{
     #versatility>h3{
         font-size: 30px;
     }
-    #modularity>*{
-        margin: 15px;
-    }
     #modularity>h2{
-        font-size: 40px;
-    }
-    #modularity>h3{
         font-size: 35px;
     }
+    #modularity>h3{
+        font-size: 30px;
+    }
     #fr4{
-        background-position: -570px -35px;
-        background-size: 190%;
+        height: 105vh;
+        background-image: url("../img/23_1.png");
+        background-position-x: 0px;
+        background-position-y: -50px;
+        background-size: 100%;
     }
     #fr5{
         background-position: -100px 0;
@@ -608,6 +645,60 @@ h3{
     #eco>h3{
         font-size: 30px;
     }
+    .txt_vers{
+        margin: 50px 5px 0px;
+    }
+    .txt_vers>h3{
+        font-size: 30px;
+    }
+    #fr7{
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+    #fr8{
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+    #fr9{
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+}
+@media screen and (max-width:1024px){
+    .txt_vers{
+        max-width: 100vw;
+        margin-top: 70px;
+    }
+    .txt_vers>h2{
+        font-size: 50px;
+        text-align: center;
+    }
+    .txt_vers>h3{
+        font-size: 40px;
+        max-width: 80vw;
+        text-align: center;
+    }
+    #fr7{
+        height: 100vh;
+        background-image: url("../img/31_1.png");
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: 0px;
+    }
+    #fr8{
+        height: 100vh;
+        background-image: url("../img/32_1.png");
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: 0px;
+    }
+    #fr9{
+        height: 100vh;
+        background-image: url("../img/33_1.png");
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: 0px;
+    }
 }
 @media screen and (max-width:1015px){
     #header_wrapper{
@@ -638,8 +729,6 @@ h3{
     }
     #versatility{
         max-width: 43vw;
-        max-height: 50%;
-        margin: auto 15px;
     }
     #versatility>h2{
         font-size: 30px;
@@ -658,7 +747,6 @@ h3{
     }
     #modularity{
         max-width: 43vw;
-        max-height: 50%;
     }
     #modularity>h2{
         font-size: 35px;
@@ -728,16 +816,12 @@ h3{
     .menu_text{
         display: none;
     }
-    .content_wrapper1{
+    /* Страницы */
+    .content_wrapper{
         max-height: 105vh;
     }
-    .content_wrapper2{
-        max-height: 52vh;
-    }
-    /* Страницы */
     .content_con{
         max-width: none;
-        max-height: none;
     }
     /* Popup */
     #data{
@@ -745,20 +829,23 @@ h3{
     }
     /* 1 страница */
     #fr1{
-        background-image: url("../img/1_2.png");
+        background-image: url("../img/1_4.png");
         background-position: center;
         background-size: cover;
     }
-    #fr1>.content_con{
-        justify-content: flex-start;
+    #fr1_cc{
+        justify-content: center;
+        align-items: flex-start;
     }
     #motto{
-        margin-top: 70px;
+        margin: 0;
+        margin-top: 100px;
         font-size: 50px;
         text-align: center;
-        align-self: center;
+        align-self: flex-start;
         width: 100%;
-        text-shadow: 1px 0 2px #b6b6b6, 0 1px 2px #b6b6b6, -1px 0 2px #b6b6b6, 0 -1px 2px #b6b6b6;
+        color: #d6d6d6;
+        /* text-shadow: 1px 0 2px #b6b6b6, 0 1px 2px #b6b6b6, -1px 0 2px #b6b6b6, 0 -1px 2px #b6b6b6; */
     }
     /* 2 страница */
     #fr2{
@@ -767,45 +854,67 @@ h3{
     }
     #comfort>h2{
         max-width: none;
+        font-size: 35px;
     }
     #comfort>h3{
-        max-width: 40vw;
+        max-width: 50vw;
+        font-size: 30px;
     }
     /* 3 страница */
     #fr3{
-        max-height: 100vh;
+        height: 100vh;
+        background-image: url("../img/2_11.png");
         background-size: cover;
-        background-position: 0 -20px;
+        background-position-x: -250px;
+        background-position-y: 0px;
+    }
+    #fr3_cc{
+        position: relative;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    #versatility{
+        max-width: 70vw;
+        align-items: flex-end;
     }
     #versatility>h2{
-        font-size: 20px;
+        max-width: 65vw;
+        font-size: 33px;
+        text-align: right;
     }
     #versatility>h3{
-        font-size: 20px;
+        max-width: 50vw;
+        font-size: 30px;
+        text-align: right;
     }
     /* 4 страница */
     #fr4{
-        max-height: 95vh;
+        height: 100vh;
         background-image: url("../img/23_4.png");
-        background-position: -450px 0;
-        background-size: auto 100%;
+        background-size: cover;
+        background-position-x: -400px;
+        background-position-y: center;
     }
-    #modularity{
-        margin-top: 90px;
+    #fr4_cc{
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #modularity {
+        max-width: 60vw;
+        margin: 0;
     }
     #modularity>h2{
-        font-size: 30px;
+        font-size: 35px;
+        text-align: left;
     }
     #modularity>h3{
-        font-size: 25px;
-    }
-    #modularity>*{
-        margin: 5px;
+        font-size: 30px;
+        text-align: left;
     }
     /* 5 страница */
     #fr5{
-        background-position: -1000px 0;
-        background-size: 200%;
+        background-position-x: -350px;
+        background-position-y: 0px;
     }
     /* 6 страница */
     #fr6{
@@ -835,28 +944,16 @@ h3{
     #eco>h3{
         font-size: 25px;
     }
-    /* 7 страница */
-    #fr7{
-        background-image: url("../img/31.png");
-        background-position: -350px 0;
-        background-size: cover;
-    }
     .txt_vers{
-        max-width: 35vw;
         margin-top: 50px;
     }
-    /* 8 страница */
-    #fr8{
-        background-image: url("../img/32.png");
-        background-position: -350px 0;
-        background-size: cover;
+    .txt_vers>h2{
+        font-size: 40px;
+        text-align: center;
     }
-
-    /* 9 страница */
-    #fr9{
-        background-image: url("../img/33.png");
-        background-position: -350px 0;
-        background-size: cover;
+    .txt_vers>h3{
+        font-size: 30px;
+        text-align: center;
     }
 }
 @media screen and (max-width: 600px){
@@ -864,30 +961,1040 @@ h3{
     #data{
         font-size: 30px;
     }
-    #comfort>h2{
-        font-size: 25px;
+    #fr3{
+        background-position-x: -250px;
     }
-    .txt_vers{
-        width: 100%;
+    #fr4{
+        background-position-x: -450px;
     }
-    #fr7_cc{
-        align-items: center;
-        width: 100%;
+    #fr5{
+        background-position-x: -350px;
     }
-    #fr7_cc{
-        align-items: center;
-        width: 100%;
+    #versatility_h2_1{
+        display: inline;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        width: 100vw;
+        font-size: 35px;
+        text-align: center;
+        color: #cfcdcd;
+    }
+    #versatility_h2_2{
+        display: none;
+    }
+    #versatility>h3{
+        font-size: 30px;
+        max-width: 60vw;
+    }
+    #fr4_cc{
+        position: relative;
+    }
+    #modularity{
+        max-width: 60vw;
+        align-items: flex-start;
+    }
+    #modularity_h2_1{
+        display: inline;
+        position: absolute;
+        top: 0px;
+        margin-top: 15px;
+        padding: 15px;
+        width: 100vw;
+        text-align: center;
+        font-size: 35px;
+    }
+    #modularity_h2_2{
+        display: none;
+    }
+    #modularity>h3{
+        max-width: 60vw;
+    }
+    .txt_vers>h3{
+        max-width: 100vw;
     }
 }
 @media screen and (max-width: 500px){
     #fr1{
-        background-image: url("../img/1_3.png");
+        background-image: url("../img/1_4.png");
         background-size: cover;
         background-position: center;
-        max-height: 100vh;
+        height: 100vh;
     }
     #motto{
         font-size: 40px;
+    }
+    #fr2{
+        background-position-x: -550px;
+    }
+    #comfort{
+        margin: 0px;
+        justify-content: center;
+    }
+    #comfort>h2{
+        font-size: 30px;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #comfort>h3{
+        font-size: 25px;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #fr3{
+        background-image: url("../img/2_12.png");
+        background-position-x: -200px;
+    }
+    #versatility_h2_1{
+        font-size: 30px;
+    }
+    #versatility>h3{
+        font-size: 25px;
+    }
+    #fr4{
+        background-position-x: -570px;
+        background-position-y: 0;
+        background-size: cover;
+    }
+    #modularity_h2_1{
+        font-size: 30px;
+    }
+    #modularity>h2{
+        font-size: 30px;
+    }
+    #modularity>h3{
+        font-size: 25px;
+    }
+    #fr5{
+        height: 70vh;
+        background-size: cover;
+        background-position-x: -350px;
+    }
+    .txt_vers{
+        max-width: 100vw;
+    }
+    .txt_vers>h2{
+        font-size: 30px;
+    }
+    .txt_vers>h3{
+        font-size: 25px;
+        max-width: 100vw;
+    }
+}
+@media screen and (max-width: 400px){
+    #fr1{
+        background-image: url("../img/1_4.png");
+    }
+    #motto{
+        color: #d6d6d6;
+        margin: 70px 0 0;
+        text-shadow: none;
+    }
+    #fr2{
+        background-position-x: -500px;
+    }
+    #fr3{
+        background-position-x: -180px;
+        background-position-y: center;
+    }
+    #versatility{
+        margin: 0px;
+    }
+    #versatility>h3{
+        max-width: 60vw;
+    }
+    #fr4{
+        background-position-x: -500px;
+    }
+    #modularity{
+        margin: 0px;
+    }
+    #modularity_h2_1{
+        font-size: 30px;
+    }
+    #fr5{
+        background-position-x: -300px;
+    }
+}
+@media screen and (max-width: 350px){
+    #logo{
+        font-size: 30px;
+        margin: 5px 15px;
+    }
+    #header_wrapper{
+        max-height: 40px;
+    }
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after{
+        height: 5px;
+        width: 30px;
+    }
+    .menu__btn>span::before{
+        top: -10px;
+    }
+    .menu__btn>span::after{
+        top: 10px;
+    }
+    .hamburger-menu{
+        margin: 5px;
+        margin-right: 50px;
+    }
+    #comfort{
+        margin-top: 20px;
+    }
+    #comfort>h2{
+        font-size: 25px;
+    }
+    #comfort>h3{
+        font-size: 20px;
+    }
+    #fr3{
+        background-position-x: -150px;
+    }
+    #versatility_h2_1{
+        font-size: 25px;
+    }
+    #versatility>h3{
+        font-size: 20px;
+    }
+    #fr4{
+        background-position-x: -450px;
+    }
+    #modularity>h3{
+        font-size: 25px;
+    }
+    #modularity>h3{
+        font-size: 20px;
+    }
+    #fr5{
+        background-position-x: -275px;
+    }
+    .txt_vers>h2{
+        font-size: 25px;
+    }
+    .txt_vers>h3{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 300px){
+    #fr3{
+        background-image: url("../img/2_14.png");
+        background-position-x: -110px;
+    }
+    #fr4{
+        background-position-x: -600px;
+    }
+    #versatility_h2_1{
+        margin-top: 20px;
+    }
+    #versatility>h3{
+        max-width: 65vw;
+    }
+    #fr5{
+        height: 50vh;
+        background-position-x: -200px;
+    }
+    .txt_vers{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 500px) and (min-width: 400px) and (min-height: 800px) and (max-height: 900px){
+    #motto{
+        font-size: 50px;
+    }
+    #fr2{
+        background-position-x: -700px;
+    }
+    #fr3{
+        background-image: url("../img/2_13.png");
+        background-position-x: -200px;
+    }
+    #versatility_h2_1{
+        top: 40px;
+    }
+    #versatility{
+        margin: 0;
+    }
+    #fr4{
+        background-position-x: -700px;
+    }
+    #modularity_h2_1{
+        top: 25px;
+    }
+    #fr5{
+        background-position-x: -430px;
+    }
+    
+}
+@media screen and (max-width: 400px) and (min-height: 800px) and (max-height: 900px) {
+    #fr1{
+        background-image: url("../img/1_5.png");
+        background-position-x: -290px;
+        background-position-y: 0;
+    }
+    #motto{
+        margin-top: 120px;
+    }
+    #fr2{
+        background-position-x: -650px;
+    }
+    #fr3{
+        background-image: url("../img/2_14.png");
+        background-position-x: -130px;
+    }
+    #fr4{
+        background-image: url("../img/23_4.png");
+        background-position-x: -710px;
+    }
+    #fr5{
+        background-position-x: -430px;
+    }
+    #fr7{
+        background-image: url("../img/31_2.png");
+    }
+    #fr8{
+        background-image: url("../img/32_2.png");
+    }
+    #fr9{
+        background-image: url("../img/33_2.png");
+    }
+}
+@media screen and (min-width:1740px) {
+    #comfort{
+        margin-top: 300px;
+    }
+}
+@media screen and (max-width:1050px) and (min-width:1000px) and (max-height:1400px) and (min-height:1200px){
+    #fr1{
+        background-image: url("../img/1_1.png");
+        background-size: 140%;
+        background-position-x: -300px;
+        background-position-y: 0px;
+    }
+    #fr2{
+        background-position-x: -900px;
+        background-position-y: 0px;
+    }
+    #comfort{
+        max-width: 50vw;
+    }
+    #comfort>h2{
+        font-size: 60px;
+    }
+    #comfort>h3{
+        max-width: 40vw;
+        font-size: 50px;
+    }
+    #fr3{
+        height: 100vh;
+        background-image: url("../img/2_11.png");
+        background-size: cover;
+        background-position-x: -450px;
+        background-position-y: 0px;
+    }
+    #fr3_cc{
+        justify-content: center;
+        align-items: flex-end;
+    }
+    #versatility{
+        margin: 0px;
+        max-width: 70vw;
+        align-items: flex-end;
+    }
+    #versatility>h2{
+        max-width: 65vw;
+        font-size: 60px;
+        text-align: right;
+    }
+    #versatility>h3{
+        max-width: 40vw;
+        font-size: 50px;
+        text-align: right;
+    }
+    #fr4{
+        height: 100vh;
+        background-image: url("../img/23_4.png");
+        background-size: cover;
+        background-position-x: -850px;
+        background-position-y: center;
+    }
+    #fr4_cc{
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #modularity{
+        margin: 0px;
+        max-width: 60vw;
+    }
+    #modularity>h2{
+        max-width: 65vw;
+        font-size: 60px;
+        text-align: left;
+    }
+    #modularity>h3{
+        max-width: 40vw;
+        font-size: 50px;
+        text-align: left;
+    }
+    #fr5{
+        background-size: cover;
+        background-position-x: -550px;
+        background-position-y: 0px;
+    }
+}
+@media screen and (max-width:1400px) and (min-width:1300px) and (max-height: 1100px) and (min-height: 1000px){
+    #fr2{
+        background-position-x: -500px;
+    }
+    #fr3{
+        background-image: url("../img/2_2.png");
+        background-size: cover;
+        background-position-x: -120px;
+    }
+    #fr4{
+        background-size: cover;
+    }
+    #fr5{
+        background-size: cover;
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    .txt_vers{
+        margin: 0;
+        justify-content: center;
+    }
+    #fr7{
+        background-position-x: -400px;
+    }
+    #fr8{
+        background-position-x: -400px;
+    }
+    #fr9{
+        background-position-x: -400px;
+    }
+}
+@media screen and (max-width: 768px) and (max-height: 1050px) and (min-height: 900px) {
+    #fr1_cc{
+        width: 100vw;
+        position: relative;
+    }
+    #motto{
+        position: absolute;
+        margin: 0;
+        top: 105px;
+        padding: 15px;
+        font-size: 70px;
+        max-width: 70vw;
+    }
+    #fr2{
+        background-position-x: -550px;
+    }
+    #comfort>h2{
+        font-size: 45px;
+    }
+    #comfort>h3{
+        font-size: 40px;
+    }
+    #fr3{
+        background-position-x: -330px;
+    }
+    #versatility>h2{
+        font-size: 40px;
+    }
+    #versatility>h3{
+        font-size: 35px;
+    }
+    #fr4{
+        background-position-x: -650px;
+    }
+    #modularity>h2{
+        font-size: 40px;
+    }
+    #modularity>h3{
+        font-size: 35px;
+    }
+    #fr5{
+        background-position-x: -500px;
+    }
+    #fr7_cc{
+        width: 100vw;
+    }
+    .txt_vers{
+        margin: 90px auto 0px;
+        justify-content: flex-start;
+        max-width: 100vw;
+    }
+    .txt_vers>h2{
+        font-size: 40px;
+    }
+    .txt_vers>h3{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 1000px) and (min-height: 700px) and (max-height: 800px){
+    #fr2{
+        background-position-x: -300px;
+    }
+    #comfort>h2{
+        font-size: 35px;
+    }
+    #comfort>h3{
+        font-size: 30px;
+    }
+    #fr3{
+        background-image: url("../img/2_2.png");
+        background-size: cover;
+        height: 80vh;
+    }
+    #versatility{
+        margin-top: 60px;
+    }
+    #fr4{
+        height: 80vh;
+    }
+    #modularity{
+        margin-top: 40px;
+    }
+    #fr5{
+        height: 100vh;
+        background-position-x: -100px;
+    }
+    .txt_vers{
+        margin: 0px;
+        max-width: 50vw;
+    }
+    .txt_vers>h2{
+        font-size: 40px;
+        text-align: left;
+    }
+    .txt_vers>h3{
+        font-size: 35px;
+        text-align: left;
+    }
+    #fr7{
+        background-image: url("../img/31.png");
+        background-position-x: -250px;
+        background-position-y: 0;
+    }
+    #fr8{
+        background-image: url("../img/32.png");
+        background-position-x: -250px;
+        background-position-y: 0;
+    }
+    #fr9{
+        background-image: url("../img/33.png");
+        background-position-x: -250px;
+        background-position-y: 0;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 1000px) and (min-height: 600px) and (max-height: 700px){
+    #fr1{
+        background-size: cover;
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #comfort>h2{
+        font-size: 35px;
+    }
+    #comfort>h3{
+        font-size: 30px;
+    }
+    #fr3{
+        height: 100vh;
+    }
+    #fr4{
+        height: 100vh;
+    }
+    #fr5{
+        height: 100vh;
+        background-position-x: 0;
+    }
+    .txt_vers{
+        margin: 0px;
+        max-width: 50vw;
+        justify-content: center;
+    }
+    .txt_vers>h2{
+        font-size: 40px;
+        text-align: left;
+    }
+    .txt_vers>h3{
+        font-size: 35px;
+        text-align: left;
+    }
+    #fr7{
+        background-image: url("../img/31.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr8{
+        background-image: url("../img/32.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr9{
+        background-image: url("../img/33.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+}
+@media screen and (max-width: 1024px) and (min-width: 1000px) and (min-height: 700px) and (max-height: 800px){
+    .txt_vers{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:850px) and (max-height:500px) and (min-height:350px){
+    #logo{
+        margin: 10px 15px;
+        font-size: 20px;
+    }
+    #header_wrapper{
+        height: 40px;
+    }
+    #buttons{
+        display: flex;
+        margin: 10px 15px;
+    }
+    #buttons>div{
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    #buy{
+        padding: 0px 10px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    h2{
+        padding: 10px;
+    }
+    h3{
+        padding: 10px;
+    }
+    #fr1{
+        background-image: url("../img/1.png");
+        background-position-x: 0;
+        background-position-y: 0px;
+        background-size: cover;
+    }
+    #fr1_cc{
+        justify-content: flex-start;
+    }
+    #motto{
+        margin: 0;
+        margin-left: 50px;
+        align-self: center;
+        color: #d6d6d6;
+    }
+    #fr2{
+        background-position-x: 0;
+    }
+    #comfort{
+        margin-top: 50px;
+    }
+    #comfort>h2{
+        font-size: 25px;
+    }
+    #comfort>h3{
+        font-size: 20px;
+    }
+    #fr3{
+        height: 100vh;
+        background-image: url("../img/2.png");
+        background-position-x: 0;
+        background-position-y: 0px;
+    }
+    #fr3_cc{
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #versatility{
+        margin-top: 30px;
+        max-width: 100vw;
+        align-items: center;
+    }
+    #versatility>h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    #versatility>h3{
+        font-size: 20px;
+        text-align: center;
+        max-width: 100vw;
+    }
+    #fr4{
+        background-image: url("../img/23_42.png");
+        background-size: cover;
+    }
+    #fr4_cc{
+        justify-content: center;
+    }
+    #modularity>h2{
+        font-size: 25px;
+        color: #d4d4d4;
+        text-align: left;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #modularity>h3{
+        font-size: 20px;
+        color: #d4d4d4;
+        text-align: left;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #fr5{
+        height: 100vh;
+        background-position-x: 0px;
+        background-position-y: -40px;
+    }
+    .txt_vers{
+        margin: 0px 5px;
+        max-width: 50vw;
+        justify-content: center;
+    }
+    .txt_vers>h2{
+        font-size: 25px;
+    }
+    .txt_vers>h3{
+        font-size: 20px;
+    }
+    #fr7{
+        background-image: url("../img/31.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr8{
+        background-image: url("../img/32.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr9{
+        background-image: url("../img/33.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+}
+@media screen and (max-width:800px) and (max-height:500px) and (min-height:350px){
+    #fr4{
+        background-size: cover;
+        background-position-x: -75px;
+    }
+    #fr5{
+        height: 80vh;
+    }
+}
+@media screen and (max-width:800px) and (min-width:350px) and (max-height:600px) and (min-height:500px){
+    #logo{
+        margin: 10px 15px;
+        font-size: 20px;
+    }
+    #header_wrapper{
+        height: 40px;
+    }
+    #buttons{
+        display: flex;
+        margin: 10px 15px;
+    }
+    #buttons>div{
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    #buy{
+        padding: 0px 10px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    #fr2{
+        background-position-x: 0px;
+    }
+    #comfort{
+        margin-top: 30px;
+    }
+    #comfort>h2{
+        font-size: 30px;
+    }
+    #comfort>h3{
+        font-size: 25px;
+    }
+    #fr3{
+        background-image: url("../img/2_16.png");
+        background-size: cover;
+        background-position-x: -275px;
+        background-position-y: 0px;
+    }
+    #versatility>h2{
+        font-size: 30px;
+    }
+    #versatility>h3{
+        font-size: 25px;
+    }
+    #fr4{
+        background-position-x: -50px;
+    }
+    #modularity>h2{
+        font-size: 30px;
+        color: #d4d4d4;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #modularity>h3{
+        font-size: 25px;
+        color: #d4d4d4;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #fr5{
+        background-position-x: 0px;
+    }
+    .txt_vers{
+        margin: 0px;
+        max-width: 50vw;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .txt_vers>h2{
+        text-align: left;
+        font-size: 30px;
+    }
+    .txt_vers>h3{
+        text-align: left;
+        font-size: 25px;
+    }
+    #fr7{
+        background-image: url("../img/31.png");
+        background-position-x: -180px;
+    }
+    #fr8{
+        background-image: url("../img/32.png");
+        background-position-x: -180px;
+    }
+    #fr9{
+        background-image: url("../img/33.png");
+        background-position-x: -180px;
+    }
+}
+@media screen and (max-width:650px) and (max-height: 400px) and (min-height: 300px) {
+    h2{
+        padding: 10px;
+    }
+    h3{
+        padding: 10px;
+    }
+    #fr1{
+        background-image: url("../img/1.png");
+        background-position-x: 0px;
+        background-position-y: 10px;
+    }
+    #fr1_cc{
+        justify-content: flex-start;
+    }
+    #motto{
+        margin: 0;
+        margin-left: 30px;
+        align-self: center;
+        font-size: 40px;
+    }
+    #fr2{
+        background-position-x: 0;
+    }
+    #comfort{
+        margin-top: 40px;
+    }
+    #comfort>h2{
+        font-size: 25px;
+    }
+    #comfort>h3{
+        font-size: 20px;
+    }
+    #fr3{
+        background-image: url("../img/2.png");
+        background-position-x: 0;
+    }
+    #fr3_cc{
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #versatility{
+        margin-top: 25px;
+        max-width: 100vw;
+        align-items: center;
+    }
+    #versatility_h2_1{
+        display: none;
+    }
+    #versatility_h2_2{
+        display: inline;
+    }
+    #versatility>h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    #versatility>h3{
+        font-size: 20px;
+        text-align: center;
+        max-width: 100vw;
+    }
+    #fr4{
+        background-image: url("../img/23_42.png");
+        background-position-x: -80px;
+    }
+    #modularity_h2_1{
+        display: none;
+    }
+    #modularity_h2_2{
+        display: inline;
+    }
+    #modularity>h2{
+        font-size: 25px;
+    }
+    #modularity>h3{
+        font-size: 20px;
+    }
+    #fr5{
+        background-position-x: 0px;
+        background-position-y: -50px;
+    }
+    .txt_vers{
+        margin: 0px 5px;
+        max-width: 50vw;
+        justify-content: center;
+    }
+    .txt_vers>h2{
+        font-size: 25px;
+    }
+    .txt_vers>h3{
+        font-size: 20px;
+    }
+    #fr7{
+        background-image: url("../img/31.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr8{
+        background-image: url("../img/32.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr9{
+        background-image: url("../img/33.png");
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+}
+@media screen and (max-width:600px) and (max-height: 350px) and (min-height: 300px) {
+    #logo{
+        margin: 7.5px 15px;
+        font-size: 15px;
+    }
+    #header_wrapper{
+        height: 30px;
+    }
+    #buttons{
+        display: flex;
+        margin: 7.5px 15px;
+    }
+    #buttons>div{
+        font-size: 15px;
+        padding: 0px 10px;
+    }
+    #buy{
+        font-size: 15px;
+        padding: 0px 10px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    h2{
+        padding: 5px;
+    }
+    h3{
+        padding: 5px;
+    }
+    #motto{
+        font-size: 30px;
+    }
+    #comfort>h2{
+        font-size: 20px;
+    }
+    #comfort>h3{
+        font-size: 15px;
+    }
+    #versatility>h2{
+        font-size: 20px;
+    }
+    #versatility>h3{
+        font-size: 15px;
+    }
+    #modularity>h2{
+        font-size: 20px;
+        color: #d4d4d4;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    #modularity>h3{
+        font-size: 15px;
+        color: #d4d4d4;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
+    }
+    .txt_vers>h2{
+        font-size: 20px;
+    }
+    .txt_vers>h3{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:700px) and (max-height: 300px) and (min-height: 250px) {
+    #logo{
+        margin: 7.5px 15px;
+        font-size: 15px;
+    }
+    #header_wrapper{
+        height: 30px;
+    }
+    #buttons{
+        display: flex;
+        margin: 7.5px 15px;
+    }
+    #buttons>div{
+        font-size: 15px;
+        padding: 0px 10px;
+    }
+    #buy{
+        font-size: 15px;
+        padding: 0px 10px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    h2{
+        padding: 10px;
+    }
+    h3{
+        padding: 10px;
+    }
+    #fr1{
+        background-image: url("../img/1.png");
+        background-position-x: 0px;
+        background-position-y: 0px;
+    }
+    #fr1_cc{
+        justify-content: flex-start;
+    }
+    #motto{
+        margin-top: 30px;
+        padding: 0px 20px;
+        font-size: 40px;
+        align-self: center;
+    }
+    #fr2{
+        background-size: cover;
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    #fr2_cc{
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #comfort{
+        margin: 0px;
     }
     #comfort>h2{
         font-size: 20px;
@@ -896,82 +2003,111 @@ h3{
         font-size: 15px;
     }
     #fr3{
-        height: 95vh;
-        background-size: 100%;
+        background-image: url("../img/2_2.png");
+        background-size: cover;
+        background-position-x: 0;
+        background-position-y: -40px;
+    }
+    #fr3_cc{
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #versatility>h2{
+        font-size: 20px;
+        max-width: 100vw;
+        text-align: center;
+    }
+    #versatility>h3{
+        font-size: 15px;
+        max-width: 100vw;
+        text-align: center;
     }
     #fr4{
-        height: 80vh;
-        background-position: -150px -20px;
-        background-size: 150%;
-    }
-    #modularity{
-        height: fit-content;
-    }
-    #fr5{
-        background-position: -300px -90px;
-    }
-}
-@media screen and (max-height: 900px){
-    #comfort{
-        font-size: 20px;
-        margin-top: 150px;
-    }
-}
-@media screen and (max-height: 850px){
-    #comfort{
-        font-size: 20px;
-        margin-top: 125px;
-    }
-}
-@media screen and (max-height: 800px){
-    #comfort{
-        font-size: 20px;
-        margin-top: 100px;
-    }
-    #modularity{
-        margin-top: 80px;
-    }
-    #fr5{
-        height: 105vh;
-    }
-}
-@media screen and (max-height: 750px){
-    #data{
-        margin: 100px auto 20px;
-    }
-    #comfort{
-        font-size: 20px;
-        margin-top: 50px;
-    }
-}
-@media screen and (max-height: 700px){
-    #data{
-        margin: 80px auto 20px;
-    }
-    #modularity{
-        margin-top: 50px;
-    }
-    #fr5{
-        background-position: 0 0;
+        background-image: url("../img/23_42.png");
         background-size: cover;
+        background-position-x: 0;
+        background-position-y: 0;
     }
-}
-@media screen and (max-height: 600px){
-    #comfort{
-        margin-top: 40px;
+    #modularity>h2{
+        font-size: 20px;
+        color: #d4d4d4;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
     }
-    #comfort>*{
-        padding: 10px;
-    }
-    #modularity{
-        margin-top: 25px;
+    #modularity>h3{
+        font-size: 15px;
+        color: #d4d4d4;
+        text-shadow: 1px 0px 2px #1d1e1f, 0px 1px 2px #1d1e1f, -1px 0px 2px #1d1e1f, 0px -1px 2px #1d1e1f;
     }
     #fr5{
-        background-position: 0 -70px;
+        height: 100vh;
+        background-position-x: 0;
+        background-position-y: -60px;
+    }
+    .txt_vers{
+        margin: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .txt_vers>h2{
+        font-size: 20px;
+        text-align: left;
+    }
+    .txt_vers>h3{
+        font-size: 15px;
+        text-align: left;
+        max-width: 45vw;
+    }
+    #fr7{
+        background-image: url("../img/31.png");
+        background-size: cover;
+        background-position-x: 0px;
+        background-position-y: -40px;
+    }
+    #fr8{
+        background-image: url("../img/32.png");
+        background-size: cover;
+        background-position-x: 0px;
+        background-position-y: -40px;
+    }
+    #fr9{
+        background-image: url("../img/33.png");
+        background-size: cover;
+        background-position-x: 0px;
+        background-position-y: -40px;
     }
 }
-@media screen and (min-width:1740px) {
-    #comfort{
-        margin-top: 300px;
+@media screen and (max-width: 300px) and (max-height: 700px) and (min-height: 600px) {
+    .hamburger-menu{
+        margin-right: 35px;
+    }
+    #fr1{
+        background-image: url("../img/1_5.png");
+    }
+    #fr2{
+        background-position-x: -550px;
+    }
+    #fr3{
+        background-image: url("../img/2_17.png");
+        background-size: cover;
+        background-position-x: -280px;
+    }
+    #fr4{
+        background-image: url("../img/23_43.png");
+        background-position-x: -350px;
+    }
+    .txt_vers{
+        margin-top: 60px;
+    }
+    #fr7{
+        background-image: url("../img/31_2.png");
+        background-position-x: -310px;
+    }
+    #fr8{
+        background-image: url("../img/32_2.png");
+        background-position-x: -340px;
+    }
+    #fr9{
+        background-image: url("../img/33_2.png");
+        background-position-x: -290px;
     }
 }
